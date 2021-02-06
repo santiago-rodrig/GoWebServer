@@ -1,7 +1,7 @@
 package models
 
 type User struct {
-	Id        int
+	ID        int
 	FirstName string
 	LastName  string
 }
@@ -16,7 +16,7 @@ func GetUsers() []*User {
 }
 
 func AddUser(user User) (User, error) {
-	user.Id = nextId
+	user.ID = nextId
 	nextId++
 	users = append(users, &user)
 	return user, nil

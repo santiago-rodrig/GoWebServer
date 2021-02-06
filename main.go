@@ -1,16 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"github.com/santiago-rodrig/GoWebServer/models"
+	"github.com/santiago-rodrig/GoWebServer/controllers"
+	"net/http"
 )
 
 func main() {
-	user := models.User{
-		Id:        2,
-		FirstName: "Santiago",
-		LastName:  "Rodriguez",
-	}
-
-	fmt.Println(user)
+	controllers.RegisterControllers()
+	http.ListenAndServe(":3000", nil)
 }
